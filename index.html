@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tudey Coffee - Kedai Kopi Spesial Urban Premium. Rasakan kopi artisan yang dibuat dengan penuh passion dalam suasana modern yang nyaman.">
+    <title>Tudey Coffee Social - Tudey Brew & Kitchen</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Tudey Social House",
+      "image": "assets/images/hero-bg.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Tajur No.177, RT.02/RW.08, Pakuan, Kec. Bogor Selatan",
+        "addressLocality": "Kota Bogor",
+        "addressRegion": "Jawa Barat",
+        "postalCode": "16143",
+        "addressCountry": "ID"
+      },
+      "telephone": "+6285158286649",
+      "url": "https://www.instagram.com/tudeycoffeesocial/"
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+    <!-- PROMO POPUP MODAL -->
+    <div id="promoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="promoTitle"
+        aria-describedby="promoDescription" aria-hidden="true">
+        <div class="modal-overlay" data-modal-close></div>
+        <div class="modal-content" role="document">
+            <button class="modal-close" id="closeModal" type="button" aria-label="Tutup penawaran">&times;</button>
+            <div class="modal-body">
+                <div class="modal-icon">☕</div>
+                <h2 id="promoTitle">Dapatkan Diskon Spesial!</h2>
+                <p class="modal-subtitle">Follow Instagram kami dan nikmati</p>
+                <div class="modal-discount">20% OFF</div>
+                <p class="modal-description" id="promoDescription">Untuk pembelian pertama Anda di Tudey Coffee!</p>
+                <a href="https://www.instagram.com/tudeycoffeesocial/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary modal-btn">
+                    Follow @tudeycoffeesocial
+                </a>
+                <p class="modal-footer-text">*Syarat dan ketentuan berlaku</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+    <nav class="navbar" aria-label="Navigasi utama">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/images/logo-white.png" alt="Tudey Coffee" class="logo-img logo-white">
+                <img src="assets/images/logo.png" alt="Tudey Coffee" class="logo-img logo-dark">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#signature">Signature</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#testimonials">Review</a></li>
+                <li><a href="#location">Lokasi</a></li>
+            </ul>
+
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button class="hamburger-menu" type="button" aria-label="Buka menu navigasi" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" aria-hidden="true"></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-label="Menu navigasi" aria-hidden="true">
+        <button class="mobile-menu-close" type="button" aria-label="Tutup menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#signature">Signature</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#testimonials">Review</a></li>
+            <li><a href="#location">Lokasi</a></li>
+        </ul>
+    </aside>
+
+    <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Coffee, Friends and good times</span>
+                    <h1>Make Your Day<br><span class="hero-accent">at Tudey</span></h1>
+                    <p class="hero-description">Lebih dari sekadar kopi. Ruang untuk bertemu, berbagi cerita, dan
+                        merayakan hari ini dengan racikan yang istimewa.</p>
+
+                    <div class="hero-cta">
+                        <a href="#menu" class="btn btn-primary-orange">Lihat Menu</a>
+                        <a href="#location" class="btn btn-outline-green">Cari Lokasi</a>
+                    </div>
+
+                    <div class="hero-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>Rated 4.7/5 on Google</span>
+                    </div>
+                </div>
+
+                <!-- Coffee Product Image -->
+                <div class="hero-image">
+                    <div class="coffee-rotation">
+                        <img src="assets/images/tudey-iced-coffee.png" alt="Segelas es kopi Tudey" class="coffee-pouch"
+                            fetchpriority="high" width="760" height="976">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discover Arrow -->
+            <div class="hero-discover">
+                <a href="#about"><span>DISCOVER</span></a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content slide-up">
+                <div class="about-text">
+                    <h2>Kisah Kami<br>
+                        <span class="italic text-primary">Tudey coffee & Social</span>
+                    </h2>
+
+                    <p>Di Tudey Coffee, kami percaya bahwa setiap cangkir memiliki ceritanya sendiri. Didirikan pada
+                        tahun 2020, kami mendedikasikan diri untuk mencari biji kopi terbaik dari perkebunan
+                        berkelanjutan di seluruh dunia dan mengolahnya menjadi pengalaman yang tak terlupakan.</p>
+                    <p>Ruang modern dan nyaman kami dirancang untuk menjadi sanctuary urban Anda—tempat di mana Anda
+                        dapat melepas penat, menikmati kopi istimewa, dan terhubung dengan sesama pecinta kopi.</p>
+                    <p>Dari pour-over signature kami hingga cold brew inovatif, setiap minuman disiapkan dengan
+                        perhatian detail yang teliti oleh barista ahli kami.</p>
+                    <a href="#menu" class="btn btn-secondary">Temukan Kopi Kami</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80"
+                        alt="Biji kopi dan peralatan seduh" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="section menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Menu Kami<br>
+                    <span class="italic text-primary">Dan Hidangan Rutin</span>
+                </h2>
+                <p>Minuman buatan tangan dari biji kopi premium yang bersumber secara etis</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=600&q=80"
+                            alt="Espresso" loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Espresso Klasik</h3>
+                        <p>Shot kopi murni yang kaya dan bold dengan crema yang lembut</p>
+                        <div class="menu-card-price">Rp 35.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80"
+                            alt="Cappuccino" loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Cappuccino Artisan</h3>
+                        <p>Espresso yang seimbang sempurna dengan microfoam lembut dan latte art</p>
+                        <div class="menu-card-price">Rp 45.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=600&q=80"
+                            alt="Pour Over" loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Pour Over Single Origin</h3>
+                        <p>Diseduh dengan hati-hati untuk menonjolkan cita rasa unik dari biji premium</p>
+                        <div class="menu-card-price">Rp 50.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&q=80"
+                            alt="Cold Brew" loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Nitro Cold Brew</h3>
+                        <p>Cold brew yang lembut dan creamy dengan infusi nitrogen untuk efek cascading</p>
+                        <div class="menu-card-price">Rp 55.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80"
+                            alt="Flat White" loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Velvet Flat White</h3>
+                        <p>Double espresso dengan susu microfoam yang di-stretch sempurna</p>
+                        <div class="menu-card-price">Rp 47.500</div>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80" alt="Latte"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Latte Signature</h3>
+                        <p>Espresso yang lembut dikombinasikan dengan steamed milk dan sentuhan seni</p>
+                        <div class="menu-card-price">Rp 45.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE DRINKS SECTION -->
+    <section id="signature" class="section signature-drinks">
+        <!-- Floating Coffee Plant Decorations -->
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-left coffee-plant-1">
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-right coffee-plant-2">
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-left coffee-plant-3">
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-right coffee-plant-4">
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-left coffee-plant-5">
+        <img src="assets/images/coffee-plant-illustration.png" alt="" aria-hidden="true"
+            class="coffee-plant-right coffee-plant-6">
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Hanya Ada Disini<br>
+                    <span class="italic text-primary">Kreasi Signature</span>
+                </h2>
+                <p>Resep eksklusif yang dibuat oleh master barista kami</p>
+            </div>
+
+            <div class="signature-grid">
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=800&q=80"
+                            alt="Honey Lavender Latte" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Honey Lavender Latte</h3>
+                    <p>Espresso signature kami yang diinfus dengan madu organik dan aroma lavender yang lembut, ditaburi
+                        foam yang lembut dan bunga yang bisa dimakan. Perpaduan harmonis antara manis bunga dan kopi
+                        yang kaya.</p>
+                    <div class="menu-card-price">Rp 65.000</div>
+                </div>
+
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
+                            alt="Matcha Espresso Fusion" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Matcha Espresso Fusion</h3>
+                    <p>Kombinasi berani antara matcha grade seremonial dan double espresso, menciptakan pengalaman unik
+                        Timur bertemu Barat. Diakhiri dengan foam oat milk dan taburan bubuk matcha.</p>
+                    <div class="menu-card-price">Rp 70.000</div>
+                </div>
+
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=800&q=80"
+                            alt="Brown Sugar Maple Macchiato" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Brown Sugar Maple Macchiato</h3>
+                    <p>Espresso yang ditarik manual berlapis dengan sirup gula merah, maple murni, dan steamed organic
+                        milk. Dimahkotai dengan caramel drizzle dan garam laut—kemewahan murni di setiap tegukan.</p>
+                    <div class="menu-card-price">Rp 67.500</div>
+                </div>
+
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80"
+                            alt="Spaghetti aglio olio" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Spaghetti Aglio Olio</h3>
+                    <p>Spaghetti klasik Italia dengan minyak zaitun extra virgin, bawang putih panggang, cabai merah
+                        segar, dan taburan parsley. Disajikan dengan parmesan premium dan roti garlic bread yang renyah.
+                    </p>
+                    <div class="menu-card-price">Rp 55.000</div>
+                </div>
+
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&q=80"
+                            alt="Nasi ayam krispi" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Nasi Ayam Krispi</h3>
+                    <p>Ayam goreng crispy dengan bumbu rempah signature kami, disajikan dengan nasi pulen, sambal matah
+                        segar, lalapan sayuran, dan kuah kaldu ayam hangat. Perpaduan sempurna rasa gurih dan pedas.</p>
+                    <div class="menu-card-price">Rp 48.000</div>
+                </div>
+
+                <div class="signature-card slide-up">
+                    <div class="signature-card-image">
+                        <img src="assets/images/saosbeefmentai.webp" alt="Nasi beef saus mentai" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Nasi Beef Saos Mentai</h3>
+                    <p>Nasi hangat dengan irisan beef tender yang dipanggang sempurna, disiram saus mentai creamy yang
+                        kaya rasa. Dilengkapi dengan taburan nori, wijen sangrai, dan sayuran segar. Kombinasi sempurna
+                        antara cita rasa Jepang dan kenikmatan beef berkualitas premium.</p>
+                    <div class="menu-card-price">Rp 58.000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery" class="photo-gallery-section">
+        <div class="gallery-container">
+            <div class="section-title">
+                <h2>Sudut Cerita<br>
+                    <span class="italic text-primary">Dalam Secangkir Kopi</span>
+                </h2>
+                <p>Lebih dari Sekadar Kopi: Suasana yang Menanti Anda</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-item bento-large">
+                    <img src="assets/images/gallery-cafe-atmosphere.jpg" alt="Suasana kafe" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Suasana Café</span>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-tall">
+                    <img src="assets/images/gallery-latte-art.jpg" alt="Latte art" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Latte Art</span>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-wide">
+                    <img src="assets/images/gallery-coffee-beans.jpg" alt="Biji kopi" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Coffee Beans</span>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-medium">
+                    <img src="assets/images/gallery-barista-work.jpg" alt="Barista sedang meracik kopi" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Barista at Work</span>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-wide">
+                    <img src="assets/images/gallery-cafe-interior.jpg" alt="Interior kafe" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Café Interior</span>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-medium">
+                    <img src="assets/images/gallery-coffee-pour.jpg" alt="Proses menuang kopi" loading="lazy" decoding="async">
+                    <div class="bento-overlay">
+                        <span>Coffee Pour</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Tamu<br>
+                    <span class="italic text-primary">Tentang Tudey</span>
+                </h2>
+                <p>Bergabunglah dengan ribuan pecinta kopi yang puas</p>
+            </div>
+
+            <!-- Row 1: Scroll Right -->
+            <div class="testimonials-scroll-wrapper">
+                <div class="testimonials-scroll scroll-right">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Pengalaman kopi terbaik di kota! Honey Lavender Latte-nya
+                            benar-benar luar biasa, dan suasananya sempurna untuk bekerja maupun bersantai."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AA</div>
+                            <div class="testimonial-info">
+                                <h4>Anita Amalia</h4>
+                                <p>Pelanggan Tetap</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Sebagai penggemar kopi, saya dengan yakin mengatakan Tudey Coffee
+                            menyajikan pour-over single origin terbaik. Baristanya benar-benar mahir!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">BP</div>
+                            <div class="testimonial-info">
+                                <h4>Budi Prasetyo</h4>
+                                <p>Penikmat Kopi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Ritual pagi saya dimulai di sini. Konsistensi kualitas dan suasana
+                            yang hangat dan ramah membuat saya kembali setiap hari."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DS</div>
+                            <div class="testimonial-info">
+                                <h4>Dini Safira</h4>
+                                <p>Pengunjung Harian</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempat favorit untuk meeting client! Kopinya premium, WiFi kencang,
+                            dan tempatnya nyaman. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RA</div>
+                            <div class="testimonial-info">
+                                <h4>Rudi Andika</h4>
+                                <p>Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Brown Sugar Maple Macchiato-nya adalah yang terbaik yang pernah
+                            saya coba. Perfect balance antara manis dan kopinya!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">LM</div>
+                            <div class="testimonial-info">
+                                <h4>Lisa Maharani</h4>
+                                <p>Coffee Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Saya suka vibe-nya yang cozy tapi modern. Cocok banget untuk
+                            nongkrong sambil ngerjain skripsi. Kopinya juga enak!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">FA</div>
+                            <div class="testimonial-info">
+                                <h4>Fira Aulia</h4>
+                                <p>Mahasiswa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Pengalaman kopi terbaik di kota! Honey Lavender Latte-nya
+                            benar-benar luar biasa, dan suasananya sempurna untuk bekerja maupun bersantai."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AA</div>
+                            <div class="testimonial-info">
+                                <h4>Anita Amalia</h4>
+                                <p>Pelanggan Tetap</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Sebagai penggemar kopi, saya dengan yakin mengatakan Tudey Coffee
+                            menyajikan pour-over single origin terbaik. Baristanya benar-benar mahir!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">BP</div>
+                            <div class="testimonial-info">
+                                <h4>Budi Prasetyo</h4>
+                                <p>Penikmat Kopi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Ritual pagi saya dimulai di sini. Konsistensi kualitas dan suasana
+                            yang hangat dan ramah membuat saya kembali setiap hari."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DS</div>
+                            <div class="testimonial-info">
+                                <h4>Dini Safira</h4>
+                                <p>Pengunjung Harian</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempat favorit untuk meeting client! Kopinya premium, WiFi kencang,
+                            dan tempatnya nyaman. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RA</div>
+                            <div class="testimonial-info">
+                                <h4>Rudi Andika</h4>
+                                <p>Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Brown Sugar Maple Macchiato-nya adalah yang terbaik yang pernah
+                            saya coba. Perfect balance antara manis dan kopinya!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">LM</div>
+                            <div class="testimonial-info">
+                                <h4>Lisa Maharani</h4>
+                                <p>Coffee Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Saya suka vibe-nya yang cozy tapi modern. Cocok banget untuk
+                            nongkrong sambil ngerjain skripsi. Kopinya juga enak!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">FA</div>
+                            <div class="testimonial-info">
+                                <h4>Fira Aulia</h4>
+                                <p>Mahasiswa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Scroll Left -->
+            <div class="testimonials-scroll-wrapper">
+                <div class="testimonials-scroll scroll-left">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Pelayanannya cepat dan ramah. Kopinya selalu fresh dan konsisten.
+                            Tempat ini sudah jadi kedai kopi favorit saya!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">TW</div>
+                            <div class="testimonial-info">
+                                <h4>Tommy Wijaya</h4>
+                                <p>Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Signature drinks-nya unik dan enak! Spaghetti Aglio Olio-nya juga
+                            recommended. Perfect spot untuk brunch weekend!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SM</div>
+                            <div class="testimonial-info">
+                                <h4>Sari Melati</h4>
+                                <p>Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempatnya instagramable banget! Kopinya juga enak, bukan cuma buat
+                            foto aja. Worth it untuk dicoba!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">NK</div>
+                            <div class="testimonial-info">
+                                <h4>Nina Kartika</h4>
+                                <p>Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Espresso-nya strong dan rich flavor. Barista-nya juga friendly dan
+                            knowledgeable tentang kopi. Top!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">HN</div>
+                            <div class="testimonial-info">
+                                <h4>Hendra Nugroho</h4>
+                                <p>Barista Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempatnya luas dan nyaman untuk kerja kelompok. Makanan dan
+                            minumannya juga variatif. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AP</div>
+                            <div class="testimonial-info">
+                                <h4>Ayu Permata</h4>
+                                <p>Team Leader</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Konsep outdoor-nya unik dan refreshing. Pas banget buat ngopi
+                            sambil menikmati udara segar. Love it!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DR</div>
+                            <div class="testimonial-info">
+                                <h4>Dimas Ramadhan</h4>
+                                <p>Architect</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Pelayanannya cepat dan ramah. Kopinya selalu fresh dan konsisten.
+                            Tempat ini sudah jadi kedai kopi favorit saya!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">TW</div>
+                            <div class="testimonial-info">
+                                <h4>Tommy Wijaya</h4>
+                                <p>Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Signature drinks-nya unik dan enak! Spaghetti Aglio Olio-nya juga
+                            recommended. Perfect spot untuk brunch weekend!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SM</div>
+                            <div class="testimonial-info">
+                                <h4>Sari Melati</h4>
+                                <p>Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempatnya instagramable banget! Kopinya juga enak, bukan cuma buat
+                            foto aja. Worth it untuk dicoba!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">NK</div>
+                            <div class="testimonial-info">
+                                <h4>Nina Kartika</h4>
+                                <p>Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Espresso-nya strong dan rich flavor. Barista-nya juga friendly dan
+                            knowledgeable tentang kopi. Top!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">HN</div>
+                            <div class="testimonial-info">
+                                <h4>Hendra Nugroho</h4>
+                                <p>Barista Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tempatnya luas dan nyaman untuk kerja kelompok. Makanan dan
+                            minumannya juga variatif. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AP</div>
+                            <div class="testimonial-info">
+                                <h4>Ayu Permata</h4>
+                                <p>Team Leader</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Konsep outdoor-nya unik dan refreshing. Pas banget buat ngopi
+                            sambil menikmati udara segar. Love it!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DR</div>
+                            <div class="testimonial-info">
+                                <h4>Dimas Ramadhan</h4>
+                                <p>Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="section location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kunjungi Kami<br>
+                    <span class="italic text-primary">Tudey Social House</span>
+                </h2>
+                <p>Sanctuary kopi urban Anda menanti</p>
+            </div>
+
+            <div class="location-content">
+                <!-- Left Side: Location Info -->
+                <div class="location-info-wrapper slide-up">
+                    <div class="location-info-card">
+                        <div class="info-columns">
+                            <!-- Left Column: Contact Info -->
+                            <div class="info-column">
+                                <h3>📍 Alamat</h3>
+                                <p class="location-address">Jl. Raya Tajur No.177, RT.02/RW.08, Pakuan,
+                                    Kec. Bogor Sel., <br>Kota Bogor, Jawa Barat 16143</p>
+
+                                <h3>📧 Email</h3>
+                                <p class="location-contact">halo@tudeycoffee.com</p>
+
+                                <h3>📞 Telepon</h3>
+                                <p class="location-contact">+62 812-3456-7890</p>
+                            </div>
+
+                            <!-- Right Column: Hours & Button -->
+                            <div class="info-column">
+                                <h3>🕐 Jam Buka</h3>
+                                <div class="location-hours">
+                                    <div class="hours-row">
+                                        <span class="day">Senin - Jumat</span>
+                                        <span class="time">07.00 - 20.00</span>
+                                    </div>
+                                    <div class="hours-row">
+                                        <span class="day">Sabtu - Minggu</span>
+                                        <span class="time">08.00 - 21.00</span>
+                                    </div>
+                                </div>
+
+                                <a href="https://wa.me/6285158286649" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-primary">Reservasi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Map -->
+                <div class="location-map-wrapper slide-up">
+                    <iframe title="Peta lokasi Tudey Social House"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.136843986537!2d106.9347669!3d-6.401411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6995f8d8fc43fb%3A0x5cb6e281d85b5d77!2sTudey%20Social%20House!5e0!3m2!1sen!2sid!4v1738634853000!5m2!1sen!2sid"
+                        width="100%" height="100%" style="border:0; border-radius: 12px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tudey Coffee</h3>
+                    <p>Kedai kopi spesial urban premium yang didedikasikan untuk menciptakan pengalaman kopi yang luar
+                        biasa.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#signature">Signature</a></li>
+                        <li><a href="#location">Lokasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul class="footer-links">
+                        <li>Jl. Raya Tajur No.177, RT.02/RW.08,</li>
+                        <li>Kota Bogor, Jawa Barat 16143</li>
+                        <li>(021) 1234-5678</li>
+                        <li>halo@tudeycoffee.com</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tudey Coffee. Hak cipta dilindungi. Dibuat dengan ❤️ dan biji kopi premium.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=3.0" defer></script>
+</body>
+
+</html>
