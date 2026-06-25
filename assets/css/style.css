@@ -785,9 +785,9 @@ body.mobile-menu-open {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-2xl) var(--spacing-lg);
+  padding: var(--spacing-2xl) 0;
 }
 
 .hero-content {
@@ -1885,6 +1885,10 @@ body.mobile-menu-open {
   .hero-content {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero-container {
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
 
   .hero-text {
