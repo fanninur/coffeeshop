@@ -759,8 +759,8 @@ body.mobile-menu-open {
 /* ===== HERO SECTION - Tropical Premium Style ===== */
 .hero {
   position: relative;
-  min-height: 85vh;
-  max-height: 750px;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -768,14 +768,6 @@ body.mobile-menu-open {
   padding-top: 56px;
   padding-bottom: 80px;
   overflow: hidden;
-}
-
-/* Firefox specific fix */
-@supports (-moz-appearance:none) {
-  .hero {
-    min-height: 80vh;
-    max-height: 700px;
-  }
 }
 
 .hero::before {
@@ -937,13 +929,6 @@ body.mobile-menu-open {
 
   50% {
     transform: translateY(-20px);
-  }
-}
-
-/* Firefox specific - adjust hero image to overflow below section */
-@supports (-moz-appearance:none) {
-  .hero-image {
-    bottom: -8%;
   }
 }
 
@@ -1925,13 +1910,6 @@ body.mobile-menu-open {
   .coffee-pouch {
     max-width: 280px;
     width: 100%;
-  }
-
-  /* Firefox specific - mobile hero image adjustment */
-  @supports (-moz-appearance:none) {
-    .hero-image {
-      bottom: -230px;
-    }
   }
 
   .hero-description {
