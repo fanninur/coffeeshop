@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modal');
     const modalClose = document.querySelector('.modal-close');
     const modalOverlay = document.querySelector('[data-modal-close]');
-    const coffeeRotation = document.querySelector('.coffee-rotation');
     const navLinks = [...document.querySelectorAll('.nav-links a, .mobile-nav-links a')];
     const sections = [...document.querySelectorAll('main section[id]')];
     let lastFocusedElement;
@@ -25,21 +24,134 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavbar();
     window.addEventListener('scroll', updateNavbar, { passive: true });
 
-    // Rotate the glass in proportion to page scroll, while its inner image keeps floating via CSS.
-    if (coffeeRotation && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        let rotationFrame;
-        const updateCoffeeRotation = () => {
-            rotationFrame = undefined;
-            const progress = Math.min(window.scrollY / Math.max(window.innerHeight * 1.25, 1), 1);
-            coffeeRotation.style.setProperty('--coffee-scroll-rotation', `${progress * 360}deg`);
+    const initCoffeeSequence = () => {
+        const sequence = document.querySelector('.hero-image.coffee-sequence');
+        const canvas = document.querySelector('#coffeeSequence');
+        const hero = sequence?.closest('.hero');
+        if (!sequence || !canvas || !hero) return;
+
+        const context = canvas.getContext('2d');
+        const frameCount = 40;
+        const frames = new Array(frameCount);
+        const loaded = new Array(frameCount).fill(false);
+        const queue = Array.from({ length: frameCount }, (_, index) => index);
+        const mobile = window.matchMedia('(max-width: 768px)');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const maxConcurrentLoads = mobile.matches ? 2 : 4;
+        let activeLoads = 0;
+        let requestedFrame = 0;
+        let canvasWidth = 0;
+        let canvasHeight = 0;
+        let animationFrame;
+        let hasRendered = false;
+
+        const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+        const easeOutCubic = (value) => 1 - ((1 - value) ** 3);
+
+        const imagePaths = (index) => {
+            const fileName = `ezgif-frame-${String(index + 1).padStart(3, '0')}.png`;
+            return [`/coffee/${fileName}`, `public/coffee/${fileName}`];
         };
-        const requestCoffeeRotation = () => {
-            if (rotationFrame === undefined) rotationFrame = window.requestAnimationFrame(updateCoffeeRotation);
+
+        const closestLoadedFrame = (index) => {
+            if (loaded[index]) return index;
+            for (let distance = 1; distance < frameCount; distance += 1) {
+                if (loaded[index - distance]) return index - distance;
+                if (loaded[index + distance]) return index + distance;
+            }
+            return -1;
         };
-        updateCoffeeRotation();
-        window.addEventListener('scroll', requestCoffeeRotation, { passive: true });
-        window.addEventListener('resize', requestCoffeeRotation, { passive: true });
-    }
+
+        const drawFrame = (index) => {
+            const frameIndex = closestLoadedFrame(index);
+            if (frameIndex < 0 || !canvasWidth || !canvasHeight) return;
+
+            const image = frames[frameIndex];
+            const scale = Math.min(canvasWidth / image.naturalWidth, canvasHeight / image.naturalHeight);
+            const drawWidth = image.naturalWidth * scale;
+            const drawHeight = image.naturalHeight * scale;
+            const drawX = (canvasWidth - drawWidth) / 2;
+            const drawY = (canvasHeight - drawHeight) / 2;
+
+            context.clearRect(0, 0, canvasWidth, canvasHeight);
+            context.drawImage(image, drawX, drawY, drawWidth, drawHeight);
+            hasRendered = true;
+        };
+
+        const resizeCanvas = () => {
+            const bounds = sequence.getBoundingClientRect();
+            const pixelRatio = Math.min(window.devicePixelRatio || 1, mobile.matches ? 1.5 : 2);
+            canvasWidth = Math.max(1, Math.floor(bounds.width));
+            canvasHeight = Math.max(1, Math.floor(bounds.height));
+            canvas.width = Math.floor(canvasWidth * pixelRatio);
+            canvas.height = Math.floor(canvasHeight * pixelRatio);
+            context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+            context.imageSmoothingEnabled = true;
+            context.imageSmoothingQuality = 'high';
+            drawFrame(requestedFrame);
+        };
+
+        const loadNext = () => {
+            while (activeLoads < maxConcurrentLoads && queue.length) {
+                const index = queue.shift();
+                const image = new Image();
+                const sources = imagePaths(index);
+                let sourceIndex = 0;
+                activeLoads += 1;
+                image.decoding = 'async';
+                image.onload = () => {
+                    frames[index] = image;
+                    loaded[index] = true;
+                    activeLoads -= 1;
+                    drawFrame(requestedFrame);
+                    loadNext();
+                };
+                image.onerror = () => {
+                    sourceIndex += 1;
+                    if (sourceIndex < sources.length) {
+                        image.src = sources[sourceIndex];
+                        return;
+                    }
+                    activeLoads -= 1;
+                    loadNext();
+                };
+                image.src = sources[sourceIndex];
+            }
+        };
+
+        const updateFrameFromScroll = () => {
+            animationFrame = undefined;
+            if (reduceMotion) return;
+            const heroStart = hero.offsetTop;
+            const transitionDistance = Math.max(hero.offsetHeight * 0.95, window.innerHeight * 0.72);
+            const progress = clamp((window.scrollY - heroStart) / transitionDistance);
+            const nextFrame = Math.round(progress * (frameCount - 1));
+            const zoomProgress = easeOutCubic(clamp((progress - 0.56) / 0.44));
+            const maxZoom = mobile.matches ? 3.25 : 4.6;
+            const zoom = 1 + (zoomProgress * (maxZoom - 1));
+            const fade = 1 - (clamp((progress - 0.9) / 0.1) * 0.18);
+
+            sequence.style.setProperty('--coffee-zoom', zoom.toFixed(3));
+            sequence.style.setProperty('--coffee-opacity', fade.toFixed(3));
+
+            if (nextFrame !== requestedFrame || !hasRendered) {
+                requestedFrame = nextFrame;
+                drawFrame(requestedFrame);
+            }
+        };
+
+        const requestFrameUpdate = () => {
+            if (animationFrame === undefined) animationFrame = window.requestAnimationFrame(updateFrameFromScroll);
+        };
+
+        resizeCanvas();
+        loadNext();
+        window.addEventListener('resize', resizeCanvas, { passive: true });
+        window.addEventListener('scroll', requestFrameUpdate, { passive: true });
+        requestFrameUpdate();
+    };
+
+    initCoffeeSequence();
 
     if ('IntersectionObserver' in window) {
         const revealObserver = new IntersectionObserver((entries, observer) => {

@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
     <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+    <link rel="preload" as="image" href="public/coffee/ezgif-frame-001.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,11 +134,9 @@
                 </div>
 
                 <!-- Coffee Product Image -->
-                <div class="hero-image">
-                    <div class="coffee-rotation">
-                        <img src="assets/images/tudey-iced-coffee.png" alt="Segelas es kopi Tudey" class="coffee-pouch"
-                            fetchpriority="high" width="760" height="976">
-                    </div>
+                <div class="hero-image coffee-sequence">
+                    <canvas id="coffeeSequence" role="img"
+                        aria-label="Animasi gelas es kopi Tudey yang berubah mengikuti scroll halaman"></canvas>
                 </div>
             </div>
 
